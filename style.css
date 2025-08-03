@@ -1,0 +1,84 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+    /**
+    * colors
+    */
+    --color-bg: #FAF9F7;
+    --color-text: #1A1A1A;
+    --color-accent: #90D8B2;
+
+    /**
+    * typography
+    */
+    --ff-open-sans: 'Open Sans';
+
+}
+
+
+html { font-family: var(--ff-open-sans); }
+
+body { background: var(--color-bg); }
+
+
+/*-----------------------------------*\
+  #NAVBAR
+\*-----------------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 10rem;
+}
+
+.nav-name {
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+/*-----------------------------------*\
+  #LANDING PAGE
+\*-----------------------------------*/
+.landing-page-container{
+  display: grid;
+  place-items: center;
+  position: relative;
+  font-size: 2vw;
+}
+
+.landing-page-img-container{
+  display: flex;
+}
+
+.landing-page-heading{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.landing-page-heading h1{
+  font-size: 1em;
+  margin: 0;
+}
+
+.triangle-img{
+  margin: 0;
+  padding: 0;
+}
+
+.triangle-img img{
+  max-width: 200px;
+  min-width: 100px;
+  width: 100%;
+  height: auto;
+}
