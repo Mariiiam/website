@@ -162,14 +162,12 @@ body { background: var(--color-bg); }
 .landing-page-heading {
   margin: 0;
   text-align: center;
-  transform: translate(0, -50%);
 }
 
 .landing-page-heading h1 {
   font-size: var(--fs-x-large);
   margin: 0;
   font-family: var(--ff-arimo);
-  -webkit-text-stroke: 1px var(--color-white);
 }
 
 /*-----------------------------------*\
@@ -227,6 +225,7 @@ body { background: var(--color-bg); }
 .contact-container a{
   font-size: var(--fs-default);
   display: flex;
+  align-items: center;
   color: var(--color-text);
   text-decoration: none;
   margin-bottom: 12px;
@@ -246,6 +245,7 @@ body { background: var(--color-bg); }
   margin-bottom: 12px;
   max-width: 380px;
   position: relative;
+  align-items: center;
 }
 
 .e-mail:hover{
