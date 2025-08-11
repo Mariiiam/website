@@ -60,6 +60,7 @@ body { background: var(--color-bg); }
   color: var(--color-text);
   text-decoration: none;
   transition: all 0.3s ease;
+  font-size: var(--fs-default);
 }
 
 .nav-link:hover,
@@ -111,7 +112,7 @@ body { background: var(--color-bg); }
 
 .triangle-img img {
   filter: grayscale(100%);
-  width: clamp(100px, 20vw, 200px);
+  width: clamp(150px, 20vw, 250px);
   height: auto;
   transition: all 0.2s ease-in-out;
 }
