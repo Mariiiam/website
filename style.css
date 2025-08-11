@@ -243,13 +243,13 @@ body { background: var(--color-bg); }
     border-radius: 4px;
     padding: 5px 8px;
     position: absolute;
-    bottom: 30%; 
-    left: 100%;
+    bottom: 25%; 
+    left: 135%;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
-    font-size: 12px;
+    font-size: var(--fs-default);
   }
 
   .e-mail.show-tooltip .tooltip-text {
