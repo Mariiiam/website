@@ -6,25 +6,26 @@
         <title>Mariam Ahsanpour Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400..700&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
     </head>
     <body>
         <header>
             <nav class="navbar">
-                <div class="nav-name">
-                    <a href="#" >Mariam Ahsanpour</a>
-                </div>
                 <div class="nav-menu">
                     <ul class="nav-list">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                        <li>
+                            <a class="nav-link nav-name" href="#" >Mariam Ahsanpour</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">UX-Case Study</a>
+                        <li>
+                            <a class="nav-link" href="#ux-case-study">UX-Case Study</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                        <li>
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -36,15 +37,19 @@
                     <div class="landing-page-img-container">
                         <figure class="triangle-img">
                             <img src="./assets/images/discover.png" alt="discover"/>
+                            <div class="overlay-text">discover</div>
                         </figure>
                         <figure class="triangle-img">
                             <img src="./assets/images/define.png" alt="define"/>
+                            <div class="overlay-text">define</div>
                         </figure>
                         <figure class="triangle-img">
                             <img src="./assets/images/develop.png" alt="develop"/>
+                            <div class="overlay-text">develop</div>
                         </figure>
                         <figure class="triangle-img">
                             <img src="./assets/images/deliver.png" alt="deliver"/>
+                            <div class="overlay-text">deliver</div>
                         </figure>
                     </div>
                     <div class="landing-page-heading">
@@ -53,7 +58,28 @@
                     </div>
                 </div>
             </div>
-            
+            <div id="ux-case-study" class="container">
+                <h2>UX-CASE-STUDY</h2>
+                <div class="card" data-link="https://www.figma.com/proto/LdkdFyK2cu0iumpVQbxClv/UX-Case-Study-LifeRelaunched?page-id=52%3A857&node-id=194-1259&t=PdDkx5W89bpyH8Jh-1">
+                    <img src="./assets/images/life-relaunched.png" alt="life relaunched"/>
+                    <div class="card-text">
+                        <h4>Life Relaunched App</h4>
+                        <p>A digital wellbeing launcher app with context-aware profiles. <br/>(2021)</p>
+                    </div>
+                </div>
+            </div>
+            <div id="about" class="container">
+                <h2>ABOUT ME</h2>
+                <div class="text">
+                    <p>Hi, I'm Mariam. I'm a Master's graduate in Human-Computer Interaction from LMU Munich with a focus on UX-Design. I’m a curious, data-driven designer who values empathy and creativity in solving real user problems.</p>
+                </div>
+            </div>
+            <div id="contact" class="container contact-container">
+                <h2>CONTACT</h2>
+                <div id="eMail" class="e-mail">mariamahsanpour@gmail.com <span class="tooltip-text">Copied!</span></div>
+                <a href="https://github.com/Mariiiam" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/mariam-ahsanpour-692375194" target="_blank">LinkedIn</a>
+            </div>
         </div>
     </body>
 </html>

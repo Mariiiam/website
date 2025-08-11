@@ -10,6 +10,7 @@
     --color-bg: #FAF9F7;
     --color-text: #1A1A1A;
     --color-accent: #90D8B2;
+    --color-white: #ffffff;
 
     /**
     * typography
@@ -17,11 +18,15 @@
     --ff-open-sans: 'Open Sans';
     --ff-arimo: 'Arimo';
     --fs-x-large: 3vw;
+    --fs-large: 1vw;
 
 }
 
 
-html { font-family: var(--ff-open-sans); }
+html { 
+  font-family: var(--ff-open-sans); 
+  scroll-behavior: smooth;
+}
 
 body { background: var(--color-bg); }
 
@@ -32,7 +37,7 @@ body { background: var(--color-bg); }
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 10rem;
+  padding: 1rem 5rem;
   background-color: var(--color-bg);
   position: fixed;
   top: 0;
@@ -42,9 +47,22 @@ body { background: var(--color-bg); }
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar a{
+.nav-menu{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link{
   color: var(--color-text);
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+  cursor: pointer;
+  background-color: var(--color-accent);
 }
 
 .nav-name {
@@ -56,7 +74,7 @@ body { background: var(--color-bg); }
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 /*-----------------------------------*\
@@ -85,16 +103,37 @@ body { background: var(--color-bg); }
 .triangle-img {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .triangle-img img {
+  filter: grayscale(100%);
   width: clamp(100px, 20vw, 200px);
   height: auto;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .triangle-img img:hover{
-  transform: scale(1.2);
+  filter: grayscale(0);
+  transform: scale(1.02);
+  transform: translateY(-6px);
+}
+
+.triangle-img:hover .overlay-text{
+  opacity: 1;
+}
+
+.overlay-text{
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: var(--color-text);
+  font-family: var(--ff-open-sans);
+  -webkit-text-stroke: 0.2px var(--color-white);
+  font-size: clamp(24px, 1vw, 32px);
+  font-weight: bold;
 }
 
 .landing-page-heading {
@@ -107,5 +146,90 @@ body { background: var(--color-bg); }
   font-size: clamp(48px, 5vw, 64px);
   margin: 0;
   font-family: var(--ff-arimo);
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px var(--color-white);
 }
+
+/*-----------------------------------*\
+  #UX-CASE-STUDY
+\*-----------------------------------*/
+.container{
+  display: flex;
+  flex-direction: column;
+  padding-left: 15%;
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+
+.container h2{
+  padding-bottom: 2%;
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  border-radius: 15px;
+  width: clamp(600px, 20vw, 720px);
+}
+
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 1em 1em 1em #d8dae0b1, -0.75em -0.75em 1em #ffffff;
+}
+
+.card-text{
+  padding: 3%;
+}
+
+.card img{
+  width: clamp(300px, 20vw, 400px);
+  aspect-ratio: auto;
+  border-radius: 15px;
+}
+
+.text{
+  max-width: 600px;
+}
+
+.contact-container a{
+  display: block;
+  color: var(--color-text);
+  text-decoration: none;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  max-width: 100px;
+}
+
+.e-mail{
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  max-width: 240px;
+  position: relative;
+}
+
+.e-mail:hover{
+  cursor: pointer;
+}
+
+.e-mail .tooltip-text {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 8px;
+    position: absolute;
+    bottom: 30%; /* Show above the div */
+    left: 100%;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Ignore pointer events */
+    font-size: 12px;
+  }
+
+  .e-mail.show-tooltip .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
