@@ -17,8 +17,10 @@
     */
     --ff-open-sans: 'Open Sans';
     --ff-arimo: 'Arimo';
-    --fs-x-large: 3vw;
-    --fs-large: 1vw;
+    --fs-x-large: 4rem;
+    --fs-large: 2rem;
+    --fs-default: 1.2rem;
+    --fs-default-18: 18px;
 
 }
 
@@ -26,6 +28,7 @@
 html { 
   font-family: var(--ff-open-sans); 
   scroll-behavior: smooth;
+  font-size: var(--fs-default-18);
 }
 
 body { background: var(--color-bg); }
@@ -132,7 +135,7 @@ body { background: var(--color-bg); }
   color: var(--color-text);
   font-family: var(--ff-open-sans);
   -webkit-text-stroke: 0.2px var(--color-white);
-  font-size: clamp(24px, 1vw, 32px);
+  font-size: var(--fs-large);
   font-weight: bold;
 }
 
@@ -143,7 +146,7 @@ body { background: var(--color-bg); }
 }
 
 .landing-page-heading h1 {
-  font-size: clamp(48px, 5vw, 64px);
+  font-size: var(--fs-x-large);
   margin: 0;
   font-family: var(--ff-arimo);
   -webkit-text-stroke: 1px var(--color-white);
@@ -162,6 +165,7 @@ body { background: var(--color-bg); }
 
 .container h2{
   padding-bottom: 2%;
+  font-size: var(--fs-large);
 }
 
 .card{
@@ -169,7 +173,7 @@ body { background: var(--color-bg); }
   align-items: center;
   transition: all 0.2s ease-in-out;
   border-radius: 15px;
-  width: clamp(600px, 20vw, 720px);
+  width: clamp(750px, 20vw, 900px);
 }
 
 .card:hover{
@@ -179,6 +183,7 @@ body { background: var(--color-bg); }
 }
 
 .card-text{
+  font-size: var(--fs-default);
   padding: 3%;
 }
 
@@ -189,10 +194,12 @@ body { background: var(--color-bg); }
 }
 
 .text{
+  font-size: var(--fs-default);
   max-width: 600px;
 }
 
 .contact-container a{
+  font-size: var(--fs-default);
   display: block;
   color: var(--color-text);
   text-decoration: none;
@@ -202,6 +209,7 @@ body { background: var(--color-bg); }
 }
 
 .e-mail{
+  font-size: var(--fs-default);
   padding-bottom: 12px;
   margin-bottom: 12px;
   max-width: 240px;
@@ -215,17 +223,17 @@ body { background: var(--color-bg); }
 .e-mail .tooltip-text {
     visibility: hidden;
     background-color: black;
-    color: #fff;
+    color: var(--color-white);
     text-align: center;
     border-radius: 4px;
     padding: 5px 8px;
     position: absolute;
-    bottom: 30%; /* Show above the div */
+    bottom: 30%; 
     left: 100%;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s;
-    pointer-events: none; /* Ignore pointer events */
+    pointer-events: none;
     font-size: 12px;
   }
 
