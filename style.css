@@ -22,6 +22,11 @@
     --fs-default: 1.2rem;
     --fs-default-18: 18px;
 
+    /**
+    * icons
+    */
+    --width: 2rem;
+
 }
 
 
@@ -137,7 +142,7 @@ body { background: var(--color-bg); }
 }
 
 .discover{
-  top: 10%;
+  top: 13%;
   transform: rotate(-45deg);
 }
 .define{
@@ -146,7 +151,7 @@ body { background: var(--color-bg); }
   left: 30%;
 }
 .develop{
-  top: 10%;
+  top: 13%;
   transform: rotate(-45deg);
 }
 .deliver{
@@ -208,6 +213,12 @@ body { background: var(--color-bg); }
   border-radius: 15px;
 }
 
+
+
+/*-----------------------------------*\
+  #ABOUT & CONTACT
+\*-----------------------------------*/
+
 .text{
   font-size: var(--fs-default);
   max-width: 600px;
@@ -215,7 +226,7 @@ body { background: var(--color-bg); }
 
 .contact-container a{
   font-size: var(--fs-default);
-  display: block;
+  display: flex;
   color: var(--color-text);
   text-decoration: none;
   margin-bottom: 12px;
@@ -223,16 +234,27 @@ body { background: var(--color-bg); }
   max-width: 100px;
 }
 
+.contact-container img{
+  width: var(--width);
+  padding-right: 12px;
+}
+
 .e-mail{
+  display: flex;
   font-size: var(--fs-default);
   padding-bottom: 12px;
   margin-bottom: 12px;
-  max-width: 240px;
+  max-width: 380px;
   position: relative;
 }
 
 .e-mail:hover{
   cursor: pointer;
+}
+
+.e-mail img{
+  width: var(--width);
+  padding-right: 12px;
 }
 
 .e-mail .tooltip-text {
@@ -244,7 +266,7 @@ body { background: var(--color-bg); }
     padding: 5px 8px;
     position: absolute;
     bottom: 25%; 
-    left: 135%;
+    left: 155%;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s;
