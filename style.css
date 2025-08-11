@@ -22,6 +22,11 @@
     --fs-default: 1.2rem;
     --fs-default-18: 18px;
 
+    /**
+    * icons
+    */
+    --width: 2rem;
+
 }
 
 
@@ -60,6 +65,7 @@ body { background: var(--color-bg); }
   color: var(--color-text);
   text-decoration: none;
   transition: all 0.3s ease;
+  font-size: var(--fs-default);
 }
 
 .nav-link:hover,
@@ -111,7 +117,7 @@ body { background: var(--color-bg); }
 
 .triangle-img img {
   filter: grayscale(100%);
-  width: clamp(100px, 20vw, 200px);
+  width: clamp(150px, 20vw, 250px);
   height: auto;
   transition: all 0.2s ease-in-out;
 }
@@ -128,17 +134,31 @@ body { background: var(--color-bg); }
 
 .overlay-text{
   position: absolute;
-  top: 49%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   opacity: 0;
   color: var(--color-text);
-  font-family: var(--ff-open-sans);
-  -webkit-text-stroke: 0.2px var(--color-white);
   font-size: var(--fs-large);
   font-weight: bold;
+  transition: all 0.2s ease-in-out;
 }
 
+.discover{
+  top: 13%;
+  transform: rotate(-45deg);
+}
+.define{
+  top: 10%;
+  transform: rotate(45deg);
+  left: 30%;
+}
+.develop{
+  top: 13%;
+  transform: rotate(-45deg);
+}
+.deliver{
+  top: 10%;
+  transform: rotate(45deg);
+  left: 30%;
+}
 .landing-page-heading {
   margin: 0;
   text-align: center;
@@ -193,6 +213,12 @@ body { background: var(--color-bg); }
   border-radius: 15px;
 }
 
+
+
+/*-----------------------------------*\
+  #ABOUT & CONTACT
+\*-----------------------------------*/
+
 .text{
   font-size: var(--fs-default);
   max-width: 600px;
@@ -200,7 +226,7 @@ body { background: var(--color-bg); }
 
 .contact-container a{
   font-size: var(--fs-default);
-  display: block;
+  display: flex;
   color: var(--color-text);
   text-decoration: none;
   margin-bottom: 12px;
@@ -208,16 +234,27 @@ body { background: var(--color-bg); }
   max-width: 100px;
 }
 
+.contact-container img{
+  width: var(--width);
+  padding-right: 12px;
+}
+
 .e-mail{
+  display: flex;
   font-size: var(--fs-default);
   padding-bottom: 12px;
   margin-bottom: 12px;
-  max-width: 240px;
+  max-width: 380px;
   position: relative;
 }
 
 .e-mail:hover{
   cursor: pointer;
+}
+
+.e-mail img{
+  width: var(--width);
+  padding-right: 12px;
 }
 
 .e-mail .tooltip-text {
@@ -228,13 +265,13 @@ body { background: var(--color-bg); }
     border-radius: 4px;
     padding: 5px 8px;
     position: absolute;
-    bottom: 30%; 
-    left: 100%;
+    bottom: 25%; 
+    left: 155%;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
-    font-size: 12px;
+    font-size: var(--fs-default);
   }
 
   .e-mail.show-tooltip .tooltip-text {
