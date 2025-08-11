@@ -129,17 +129,31 @@ body { background: var(--color-bg); }
 
 .overlay-text{
   position: absolute;
-  top: 49%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   opacity: 0;
   color: var(--color-text);
-  font-family: var(--ff-open-sans);
-  -webkit-text-stroke: 0.2px var(--color-white);
   font-size: var(--fs-large);
   font-weight: bold;
+  transition: all 0.2s ease-in-out;
 }
 
+.discover{
+  top: 10%;
+  transform: rotate(-45deg);
+}
+.define{
+  top: 10%;
+  transform: rotate(45deg);
+  left: 30%;
+}
+.develop{
+  top: 10%;
+  transform: rotate(-45deg);
+}
+.deliver{
+  top: 10%;
+  transform: rotate(45deg);
+  left: 30%;
+}
 .landing-page-heading {
   margin: 0;
   text-align: center;
