@@ -93,7 +93,7 @@ body { background: var(--color-bg); }
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vh;
   height: 100vh;
 }
 
