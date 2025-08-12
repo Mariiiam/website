@@ -107,6 +107,8 @@ body { background: var(--color-bg); }
 
 .landing-page-img-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .triangle-img {
@@ -129,7 +131,7 @@ body { background: var(--color-bg); }
 }
 
 .triangle-img:hover .overlay-text{
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .overlay-text{
